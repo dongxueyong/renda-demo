@@ -1,0 +1,29 @@
+# 配置视图解析器的前后缀
+spring:
+  mvc:
+    view:
+      prefix: /jsp/
+      suffix: .jsp
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      connection-test-query: select 1
+      pool-name: renda
+      maximum-pool-size: 60
+      idle-timeout: 60000
+    url: jdbc:mysql://39.105.171.173:3306/bootsoul?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: bootsoul
+    password: bootsoul@#ghydhfn
+    driver-class-name: com.mysql.cj.jdbc.Driver           #mysql驱动包
+
+mybatis-plus:
+  # 实体类扫描路径
+  type-aliases-package: com.jeesoul.rendademo.domain
+  # xml 扫描路径
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    jdbc-type-for-null: null
+  global-config:
+    # 关闭 mybatis-plus的 banner
+    banner: false

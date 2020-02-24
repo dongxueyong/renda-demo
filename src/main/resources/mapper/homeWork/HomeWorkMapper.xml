@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jeesoul.rendademo.mapper.HomeWorkMapper">
+  <resultMap id="BaseResultMap" type="com.jeesoul.rendademo.domain.HomeWork">
+    <!--@mbg.generated-->
+    <!--@Table r_home_work-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="home_name" jdbcType="VARCHAR" property="homeName" />
+    <result column="home_url" jdbcType="VARCHAR" property="homeUrl" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, home_name, home_url, remark, create_time, update_time
+  </sql>
+</mapper>

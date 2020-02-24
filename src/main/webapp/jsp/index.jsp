@@ -38,7 +38,7 @@
 <div class="layui-body" id="LAY_app_body">
     <div class="layadmin-tabsbody-item layui-show" style="text-align: center">
 
-        <iframe src="http://learning.cmr.com.cn/student/acourse/HomeworkCenter/InstantRnd.asp?CourseID=zk103b&CID=04110001"
+        <%--<iframe src="http://learning.cmr.com.cn/student/acourse/HomeworkCenter/InstantRnd.asp?CourseID=zk103b&CID=04110001"
                 class="layadmin-iframe"></iframe>
         <iframe src="http://learning.cmr.com.cn/student/acourse/HomeworkCenter/InstantRnd.asp?CourseID=zk103b&CID=04110002"
                 class="layadmin-iframe"></iframe>
@@ -57,7 +57,17 @@
         <iframe src="http://learning.cmr.com.cn/student/acourse/HomeworkCenter/InstantRnd.asp?CourseID=zk103b&CID=04110009"
                 class="layadmin-iframe"></iframe>
         <iframe src="http://learning.cmr.com.cn/student/acourse/HomeworkCenter/InstantRnd.asp?CourseID=zk103b&CID=04110010"
-                class="layadmin-iframe"></iframe>
+                class="layadmin-iframe"></iframe>--%>
+
+
+        <c:forEach items="${homeworkList}" var="map">
+
+            <iframe src="${map.homeUrl}"
+                    class="layadmin-iframe"></iframe>
+
+
+        </c:forEach>
+
     </div>
 
 </div>
